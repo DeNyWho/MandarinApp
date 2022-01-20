@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.dialog.AddGroupBottomSheetDialogFragment">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/addGroupImageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_group"
+        android:scaleType="center"
+        android:layout_marginTop="@dimen/margin_16dp"
+        android:background="@color/lightest_pearl"
+        app:shapeAppearance="@style/RoundShapeAppearance"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/selectGroupPhotoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:textColor="@color/light_pearl"
+        android:textSize="@dimen/text_size_12sp"
+        android:background="@drawable/ripple_effect_curved_edges_8dp"
+        android:padding="@dimen/padding_8dp"
+        android:drawablePadding="@dimen/padding_4dp"
+        android:text="@string/select_group_icon_text"
+        app:drawableEndCompat="@drawable/ic_add_new_photo" />
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/addGroupNameTextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_16dp"
+        android:layout_gravity="center"
+        app:counterEnabled="true"
+        app:counterMaxLength="25"
+        app:boxCornerRadiusBottomEnd="@dimen/corner_radius_8dp"
+        app:boxCornerRadiusBottomStart="@dimen/corner_radius_8dp"
+        app:boxCornerRadiusTopEnd="@dimen/corner_radius_8dp"
+        app:boxCornerRadiusTopStart="@dimen/corner_radius_8dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginHorizontal="@dimen/margin_16dp"
+        app:boxBackgroundColor="@color/white"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/addGroupNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:gravity="start"
+            android:textSize="@dimen/text_size_14sp"
+            android:hint="@string/group_name_text"
+            android:inputType="text"
+            android:textColor="@color/light_pearl" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/addGroupDescriptionTextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_16dp"
+        android:layout_gravity="center"
+        app:counterEnabled="true"
+        app:counterMaxLength="150"
+        app:boxCornerRadiusBottomEnd="@dimen/corner_radius_8dp"
+        app:boxCornerRadiusBottomStart="@dimen/corner_radius_8dp"
+        app:boxCornerRadiusTopEnd="@dimen/corner_radius_8dp"
+        app:boxCornerRadiusTopStart="@dimen/corner_radius_8dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginHorizontal="@dimen/margin_16dp"
+        app:boxBackgroundColor="@color/white"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/addGroupDescriptionEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:padding="12dp"
+            android:textSize="@dimen/text_size_14sp"
+            android:inputType="textMultiLine"
+            android:hint="@string/group_description_text"
+            android:lines="3"
+            android:textColor="@color/light_pearl" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/createGroupButton"
+        android:textColor="@color/pearl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:layout_marginTop="@dimen/margin_16dp"
+        android:layout_marginBottom="@dimen/margin_16dp"
+        android:layout_gravity="end"
+        android:drawableTop="@drawable/ic_save"
+        android:background="@drawable/ripple_effect_curved_edges_8dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:textSize="@dimen/text_size_12sp"
+        android:text="@string/create_text"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_group_members_text"
+            android:textColor="@color/light_pearl"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/text_size_15sp" />
+
+        <TextView
+            android:id="@+id/selectedMemberCountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:visibility="gone"
+            android:layout_marginStart="@dimen/padding_8dp"
+            android:textColor="@color/light_pearl"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_15sp"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <View
+        android:id="@+id/profileHorizontalLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_1dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:background="@color/lighter_pearl" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/addGroupMembersRecyclerView"
+            android:layout_width="match_parent"
+            android:overScrollMode="never"
+            android:layout_marginStart="@dimen/margin_8dp"
+            android:layout_marginEnd="@dimen/margin_8dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_new_group_member"
+            android:layout_height="match_parent"/>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

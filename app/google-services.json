@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "589335886337",
+    "firebase_url": "https://mandarin-65b35-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "mandarin-65b35",
+    "storage_bucket": "mandarin-65b35.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:589335886337:android:5b38f3673421f0014d5e00",
+        "android_client_info": {
+          "package_name": "com.example.mandarin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "589335886337-nodarng7qo66fnussr00q4691hlmi0jr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mandarin",
+            "certificate_hash": "3bb86dfbe0324de151170c75ba4e630e7a19fa7a"
+          }
+        },
+        {
+          "client_id": "589335886337-4igqd7ebhb6vpdqg0eq97lulc721rs8s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlhuRQx4K50GrUA95-Cn2o-6G0oKHi17I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "589335886337-4igqd7ebhb6vpdqg0eq97lulc721rs8s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

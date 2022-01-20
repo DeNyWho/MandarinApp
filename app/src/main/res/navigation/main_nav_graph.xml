@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.mandarin.view.fragment.MandarinFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_mandarin" >
+        <action
+            android:id="@+id/action_homeFragment_to_groupMessageFragment"
+            app:destination="@id/groupMessageFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_userInfoFragment"
+            app:destination="@id/userInfoFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_privateMessageFragment"
+            app:destination="@id/privateMessageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.mandarin.view.fragment.ProfileFragment"
+        android:label="@string/menu_item_profile_title"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/groupMessageFragment"
+        android:name="com.example.mandarin.view.fragment.GroupMessageFragment"
+        tools:layout="@layout/fragment_group_message" >
+        <argument
+            android:name="groupId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_groupMessageFragment_to_groupInfoFragment"
+            app:destination="@id/groupInfoFragment" />
+        <action
+            android:id="@+id/action_groupMessageFragment_to_userInfoFragment"
+            app:destination="@id/userInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/groupInfoFragment"
+        android:name="com.example.mandarin.view.fragment.GroupInfoFragment"
+        android:label="Group Info"
+        tools:layout="@layout/fragment_group_info" >
+        <argument
+            android:name="groupId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_groupInfoFragment_to_userInfoFragment"
+            app:destination="@id/userInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatsFragment"
+        android:name="com.example.mandarin.view.fragment.ChatsFragment"
+        android:label="Messages"
+        tools:layout="@layout/fragment_private_chats" >
+        <action
+            android:id="@+id/action_chatsFragment_to_privateMessageFragment"
+            app:destination="@id/privateMessageFragment" />
+        <action
+            android:id="@+id/action_chatsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/privateMessageFragment"
+        android:name="com.example.mandarin.view.fragment.PrivateMessageFragment"
+        tools:layout="@layout/fragment_private_message">
+        <argument
+            android:name="chateeId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_privateMessageFragment_to_chateeInfoFragment"
+            app:destination="@id/chateeInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chateeInfoFragment"
+        android:name="com.example.mandarin.view.fragment.ChateeInfoFragment"
+        tools:layout="@layout/fragment_chatee_info">
+        <argument
+            android:name="chateeId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/groupsFragment"
+        android:name="com.example.mandarin.view.fragment.GroupsFragment"
+        android:label="fragment_groups"
+        tools:layout="@layout/fragment_groups" />
+    <fragment
+        android:id="@+id/userInfoFragment"
+        android:name="com.example.mandarin.view.fragment.UserInfoFragment"
+        tools:layout="@layout/fragment_user_info">
+        <argument
+            android:name="userId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/contacts"
+        android:name="com.example.mandarin.view.fragment.Contacts"
+        android:label="Contacts"
+        tools:layout="@layout/fragment_contacts" />
+    <fragment
+        android:id="@+id/friendsFragment"
+        android:name="com.example.mandarin.view.fragment.FriendsFragment"
+        android:label="fragment_friends"
+        tools:layout="@layout/fragment_friends" >
+        <action
+            android:id="@+id/action_friendsFragment_to_privateMessageFragment"
+            app:destination="@id/privateMessageFragment" />
+    </fragment>
+</navigation>

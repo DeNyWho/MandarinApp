@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.dialog.MemberInteractionBottomSheetDialogFragment">
+
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/photoProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:indicatorColor="@color/light_pearl"
+        app:trackColor="@color/lightest_pearl"
+        app:trackThickness="@dimen/margin_2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/groupMemberImageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="center"
+        android:layout_marginTop="@dimen/padding_16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/RoundShapeAppearance" />
+
+    <TextView
+        android:id="@+id/groupMemberName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:textColor="@color/light_pearl"
+        android:textSize="@dimen/text_size_16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/groupMemberImageView"
+        app:layout_constraintStart_toStartOf="@+id/groupMemberImageView"
+        app:layout_constraintTop_toBottomOf="@+id/groupMemberImageView" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/viewProfileTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/margin_16dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:background="@drawable/ripple_effect_curved_edges_8dp"
+        android:clickable="true"
+        android:drawablePadding="@dimen/padding_8dp"
+        android:focusable="true"
+        android:padding="@dimen/padding_8dp"
+        android:text="@string/view_profile_text"
+        android:textColor="@color/light_pearl"
+        android:textSize="@dimen/text_size_15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/groupMemberName" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/sendMessageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/padding_8dp"
+        android:layout_marginBottom="@dimen/margin_16dp"
+        android:background="@drawable/ripple_effect_curved_edges_8dp"
+        android:clickable="true"
+        android:drawablePadding="@dimen/padding_8dp"
+        android:focusable="true"
+        android:padding="@dimen/padding_8dp"
+        android:text="@string/send_message_text"
+        android:textColor="@color/light_pearl"
+        android:textSize="@dimen/text_size_15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewProfileTextView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editMessageTextInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_marginHorizontal="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        app:boxCornerRadiusBottomEnd="@dimen/corner_radius_8dp"
+        app:boxCornerRadiusBottomStart="@dimen/corner_radius_8dp"
+        app:boxCornerRadiusTopEnd="@dimen/corner_radius_8dp"
+        app:boxCornerRadiusTopStart="@dimen/corner_radius_8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sendMessageTextView">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editMMessageEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/write_message_text"
+            android:inputType="textMultiLine"
+            android:maxLines="4"
+            android:padding="12dp"
+            android:textColor="@color/light_pearl"
+            android:textSize="@dimen/text_size_14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/margin_8dp"
+        android:layout_marginBottom="@dimen/margin_16dp"
+        android:background="@drawable/ripple_effect_curved_edges_8dp"
+        android:text="@string/send_text"
+        android:visibility="gone"
+        android:textColor="@color/light_pearl"
+        android:textSize="@dimen/text_size_12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editMessageTextInputLayout"
+        app:layout_constraintStart_toStartOf="@+id/editMessageTextInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/editMessageTextInputLayout"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

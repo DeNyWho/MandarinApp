@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".view.activity.MainActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="bottom">
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/headerPhotoProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:indicatorColor="@color/light_pearl"
+        app:trackColor="@color/lightest_pearl"
+        app:trackThickness="@dimen/margin_2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="52dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profileImageView"
+        android:layout_width="@dimen/image_weight_80dp"
+        android:layout_height="@dimen/image_height_80dp"
+        android:layout_marginTop="36dp"
+        android:scaleType="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/RoundShapeAppearance" />
+
+    <TextView
+        android:id="@+id/profileNameTextView"
+        android:layout_width="@dimen/width_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_28dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textColor="@color/pearl"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_size_16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileImageView" />
+
+    <TextView
+        android:id="@+id/profileEmailTextView"
+        android:layout_width="@dimen/width_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textColor="@color/light_pearl"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/profileNameTextView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/profileNameTextView"
+        app:layout_constraintTop_toBottomOf="@+id/profileNameTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
