@@ -11,7 +11,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Create Profile"
+        android:text="Создание профиля"
         android:textColor="@color/light_pearl"
         android:layout_marginTop="@dimen/padding_16dp"
         android:textStyle="bold"
@@ -30,7 +30,7 @@
         android:layout_gravity="center_horizontal"
         android:gravity="center"
         android:layout_marginTop="@dimen/height_20dp"
-        android:text="Enter your name and,\n if desired,set a profile photo"/>
+        android:text="Напишите ваше имя,\n и если желаете добавьте фотографию"/>
 
     <com.google.android.material.progressindicator.CircularProgressIndicator
         android:id="@+id/photoProgressBar"
@@ -80,7 +80,7 @@
             android:id="@+id/editNameEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Username"
+            android:hint="Никнейм"
             android:padding="12dp"
             android:textSize="@dimen/text_size_14sp"
             android:maxLines="5"
@@ -97,9 +97,10 @@
         android:drawableStart="@drawable/ic_save"
         android:paddingStart="@dimen/padding_12dp"
         android:textSize="@dimen/text_size_12sp"
+        android:textAllCaps="false"
         android:layout_marginBottom="@dimen/margin_16dp"
         android:layout_gravity="center"
-        android:text="Save"/>
+        android:text="Сохранить"/>
 
 
 

@@ -7,16 +7,16 @@
                      <group android:checkableBehavior="single" >
                             <item
                                 android:id="@+id/profileFragment"
-                                android:title="@string/menu_item_profile_title"
+                                android:title="Профиль"
                                 android:icon="@drawable/ic_profile"/>
                             <item
                                 android:id="@+id/contacts"
-                                android:title="Contacts"
+                                android:title="Контакты"
                                 android:icon="@drawable/ic_baseline_people_24" />
                             <item
                                 android:id="@+id/logOutTextView"
                                 android:onClick="logOut"
-                                android:title="@string/menu_item_logout_title"
+                                android:title="Выход"
                                 android:icon="@drawable/ic_logout" />
                      </group>
               </menu>

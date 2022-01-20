@@ -18,7 +18,7 @@ android {
         applicationId "com.example.mandarin"
         minSdkVersion 21
         targetSdkVersion 30
-        resConfigs "en"
+        resConfigs "ru"
         versionCode 2
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"

@@ -30,7 +30,7 @@
             android:lines="1"
             android:padding="12dp"
             android:textSize="@dimen/text_size_14sp"
-            android:hint="Name"/>
+            android:hint="Имя"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -55,7 +55,7 @@
             android:lines="1"
             android:padding="12dp"
             android:textSize="@dimen/text_size_14sp"
-            android:hint="Phone Number"/>
+            android:hint="Номер телефона"/>
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -74,6 +74,7 @@
         android:drawableStart="@drawable/ic_save"
         android:background="@drawable/ripple_effect_curved_edges_8dp"
         android:layout_gravity="center"
-        android:text="@string/save_text"/>
+        android:textAllCaps="false"
+        android:text="Сохранить"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

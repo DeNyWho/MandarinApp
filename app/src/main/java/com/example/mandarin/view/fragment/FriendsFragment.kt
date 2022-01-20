@@ -58,8 +58,7 @@ class FriendsFragment : Fragment() {
 
     fun onItemClick(chateeId: String, view: View) {
         if (actionMode == null) {
-            val action = FriendsFragmentDirections
-                .actionFriendsFragmentToPrivateMessageFragment(chateeId)
+            val action = ContactsDirections.actionContactsToPrivateMessageFragment(chateeId)
             findNavController().navigate(action)
         } else {
             updateSelection(chateeId, view)

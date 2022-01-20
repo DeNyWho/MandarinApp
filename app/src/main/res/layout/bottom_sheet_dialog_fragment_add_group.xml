@@ -28,7 +28,8 @@
         android:background="@drawable/ripple_effect_curved_edges_8dp"
         android:padding="@dimen/padding_8dp"
         android:drawablePadding="@dimen/padding_4dp"
-        android:text="@string/select_group_icon_text"
+        android:text="Выберите фото"
+        android:textAllCaps="false"
         app:drawableEndCompat="@drawable/ic_add_new_photo" />
 
 
@@ -57,7 +58,7 @@
             android:padding="12dp"
             android:gravity="start"
             android:textSize="@dimen/text_size_14sp"
-            android:hint="@string/group_name_text"
+            android:hint="Название группы"
             android:inputType="text"
             android:textColor="@color/light_pearl" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -87,7 +88,7 @@
             android:padding="12dp"
             android:textSize="@dimen/text_size_14sp"
             android:inputType="textMultiLine"
-            android:hint="@string/group_description_text"
+            android:hint="Описание группы (не обязательно для заполнения)"
             android:lines="3"
             android:textColor="@color/light_pearl" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -105,7 +106,8 @@
         android:background="@drawable/ripple_effect_curved_edges_8dp"
         android:layout_marginEnd="@dimen/margin_16dp"
         android:textSize="@dimen/text_size_12sp"
-        android:text="@string/create_text"/>
+        android:textAllCaps="false"
+        android:text="создать"/>
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
@@ -115,7 +117,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/select_group_members_text"
+            android:text="Выберите участников группы"
             android:textColor="@color/light_pearl"
             android:textStyle="bold"
             android:layout_gravity="center_horizontal"
