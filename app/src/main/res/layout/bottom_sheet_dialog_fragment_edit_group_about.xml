@@ -27,7 +27,7 @@
             android:id="@+id/editAboutEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Group Description"
+            android:hint="Описание группы"
             android:padding="12dp"
             android:textSize="@dimen/text_size_14sp"
             android:maxLines="5"
@@ -46,6 +46,7 @@
         android:textSize="@dimen/text_size_12sp"
         android:layout_marginBottom="@dimen/margin_16dp"
         android:layout_gravity="center"
-        android:text="Save"/>
+        android:textAllCaps="false"
+        android:text="Сохранить"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

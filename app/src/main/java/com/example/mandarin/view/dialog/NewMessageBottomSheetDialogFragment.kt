@@ -2,6 +2,7 @@ package com.example.mandarin.view.dialog
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -73,14 +74,11 @@ class NewMessageBottomSheetDialogFragment (
 
     override fun onItemClick(user: User) {
         selectedUserId = user.userId
+        Log.e("USERID","${user.userId}")
 
-        selectedUserId?.let {
-            MandarinFragmentDirections.actionHomeFragmentToPrivateMessageFragment(it)
+        val action = MandarinFragmentDirections.actionHomeFragmentToPrivateMessageFragment(user.userId!!)
+        findNavController().navigate(action)
 
-        }?.also {
-            findNavController().navigate(it)
-            this.dismiss()
-        }
 
     }
 

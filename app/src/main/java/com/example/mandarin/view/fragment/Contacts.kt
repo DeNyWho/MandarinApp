@@ -66,8 +66,8 @@ class Contacts:
 
                 TabLayoutMediator(homeFragmentTabLayout, viewPager) { tab, position ->
                     tab.text = when (position) {
-                        0 -> "People"
-                        1 -> "Friends"
+                        0 -> "Люди"
+                        1 -> "Друзья"
                         else -> getString(R.string.groups_tab_name)
                     }
                 }.attach()

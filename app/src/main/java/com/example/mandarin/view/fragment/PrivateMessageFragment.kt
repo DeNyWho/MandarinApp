@@ -3,6 +3,7 @@ package com.example.mandarin.view.fragment
 import android.annotation.SuppressLint
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -105,6 +106,7 @@ class PrivateMessageFragment :
         dbRef = Firebase.database.reference
         auth = Firebase.auth
         currentUser = auth.currentUser!!
+        Log.e("CHAT ID ", "${args.chateeId}")
 
         dbRef.child("profiles").child(args.chateeId).get().addOnSuccessListener {
             dataSnapshot ->

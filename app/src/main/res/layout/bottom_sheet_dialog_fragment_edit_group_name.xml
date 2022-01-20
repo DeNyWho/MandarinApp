@@ -29,7 +29,7 @@
             android:id="@+id/editGroupNameEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Group Name"
+            android:hint="Название группы"
             android:padding="12dp"
             android:textSize="@dimen/text_size_14sp"
             android:maxLines="5"
@@ -48,6 +48,7 @@
         android:background="@drawable/ripple_effect_curved_edges_8dp"
         android:layout_marginBottom="@dimen/margin_16dp"
         android:layout_gravity="center"
-        android:text="Save"/>
+        android:textAllCaps="false"
+        android:text="Сохранить"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

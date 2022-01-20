@@ -103,7 +103,11 @@
         android:id="@+id/contacts"
         android:name="com.example.mandarin.view.fragment.Contacts"
         android:label="Contacts"
-        tools:layout="@layout/fragment_contacts" />
+        tools:layout="@layout/fragment_contacts" >
+        <action
+            android:id="@+id/action_contacts_to_privateMessageFragment"
+            app:destination="@id/privateMessageFragment" />
+    </fragment>
     <fragment
         android:id="@+id/friendsFragment"
         android:name="com.example.mandarin.view.fragment.FriendsFragment"
